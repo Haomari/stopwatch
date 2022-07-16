@@ -62,16 +62,18 @@ ul li{
     flex-wrap: wrap;
     gap: 25px;
     margin-bottom: 40px;
+		order: 1;
   }
 
   &__button {
+		aspect-ratio: 1 / 1;
     letter-spacing: 0.14em;
     line-height: 1.2;
     width: 120px;
-    height: 40px;
+    // height: 40px;
     background-color: rgb(163, 153, 6);
     color: rgb(223, 223, 223);
-    border-radius: 20px;
+    border-radius: 50%;
     transition: all 0.3s ease 0s;
 
     &:hover {
@@ -115,36 +117,54 @@ ul li{
 			font-size: 7.6em;
 		}
 
-		&__button {
-
-			&_1 {
-				flex: 0 1 30%;
-			}
-	
-			&_2 {				
-				flex: 0 1 30%;
-			}
-	
-			&_3 {				
-				flex: 0 1 30%;
-			}
-	
-			&_4 {				
-				flex: 0 1 30%;
-			}
-	
-			&_5 {				
-				flex: 0 1 30%;
-			}
-	
-			&_6 {				
-				flex: 0 1 30%;
-			}
+		&__controls {
+			gap: 15%;
+			row-gap: 20px;
 		}
+
+		&__body {
+			flex: 0 0 60%;
+		}
+
+		// &__button {
+
+		// 	&_1 {
+		// 		flex: 0 1 30%;
+		// 	}
+	
+		// 	&_2 {				
+		// 		flex: 0 1 30%;
+		// 	}
+	
+		// 	&_3 {				
+		// 		flex: 0 1 30%;
+		// 	}
+	
+		// 	&_4 {				
+		// 		flex: 0 1 30%;
+		// 	}
+	
+		// 	&_5 {				
+		// 		flex: 0 1 30%;
+		// 	}
+	
+		// 	&_6 {				
+		// 		flex: 0 1 30%;
+		// 	}
+		// }
 	}
 }
 @media (max-width: 767.98px) {
 	.main {
+
+		&__controls {
+			gap: 5%;
+			row-gap: 20px;
+		}
+
+		&__body {
+			flex: 0 0 60%;
+		}
 
 		&__time {
 			font-size: 5.8em;
@@ -154,11 +174,15 @@ ul li{
 @media (max-width: 579.98px) {
 	.main {
 
+		&__body {
+			flex: 0 0 65%;
+		}
+
 		&__time {
 			font-size: 3.2em;
 		}
 
-		&__button {
+/* 		&__button {
 
 			&_1 {
 				flex: 0 1 45%;
@@ -183,6 +207,6 @@ ul li{
 			&_6 {				
 				flex: 0 1 45%;
 			}
-		}
+		} */
 	}
 }

@@ -150,15 +150,18 @@ ul li {
       flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 40px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .main__button {
+  aspect-ratio: 1/1;
   letter-spacing: 0.14em;
   line-height: 1.2;
   width: 120px;
-  height: 40px;
   background-color: rgb(163, 153, 6);
   color: rgb(223, 223, 223);
-  border-radius: 20px;
+  border-radius: 50%;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -183,74 +186,65 @@ ul li {
   .main__time {
     font-size: 7.6em;
   }
-  .main__button_1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
+  .main__controls {
+    gap: 15%;
+    row-gap: 20px;
   }
-  .main__button_2 {
+  .main__body {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
-  }
-  .main__button_3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
-  }
-  .main__button_4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
-  }
-  .main__button_5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
-  }
-  .main__button_6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
   }
 }
 @media (max-width: 767.98px) {
+  .main__controls {
+    gap: 5%;
+    row-gap: 20px;
+  }
+  .main__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
   .main__time {
     font-size: 5.8em;
   }
 }
 @media (max-width: 579.98px) {
+  .main {
+    /* 		&__button {
+
+    			&_1 {
+    				flex: 0 1 45%;
+    			}
+
+    			&_2 {				
+    				flex: 0 1 45%;
+    			}
+
+    			&_3 {				
+    				flex: 0 1 45%;
+    			}
+
+    			&_4 {				
+    				flex: 0 1 45%;
+    			}
+
+    			&_5 {				
+    				flex: 0 1 45%;
+    			}
+
+    			&_6 {				
+    				flex: 0 1 45%;
+    			}
+    		} */
+  }
+  .main__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+            flex: 0 0 65%;
+  }
   .main__time {
     font-size: 3.2em;
-  }
-  .main__button_1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
-  }
-  .main__button_2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
-  }
-  .main__button_3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
-  }
-  .main__button_4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
-  }
-  .main__button_5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
-  }
-  .main__button_6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%;
   }
 }
