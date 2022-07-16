@@ -1,0 +1,188 @@
+@import "null.style.scss";
+@import url(https://fonts.googleapis.com/css?family=Rubik:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display-swap);
+
+html {
+  min-width: 320px;
+}
+
+body {
+
+  font-family: Rubik;
+  font-size: 20px;
+  background: #091921;
+}
+
+
+[class*="__container"] {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li{
+	padding: 10px 0;
+}
+
+// 
+
+
+
+.main {
+
+  &__container {
+    height: 100vh;
+  }
+
+  &__stopwatch {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+	&__body {
+		display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+		flex: 0 0 50%;
+	}
+
+  &__controls {
+    display: flex;
+		justify-content: center;
+		align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(163, 153, 6);
+    color: rgb(223, 223, 223);
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      box-shadow: 0px 4px 18px rgba(244, 246, 252, 0.18);
+      color: rgb(0, 0, 0);
+      background-color: rgb(138, 129, 5);
+    }
+
+    &_1 {}
+
+    &_2 {}
+
+    &_3 {}
+
+    &_4 {}
+
+    &_5 {}
+
+    &_8 {}
+
+  }
+
+  &__time {
+    font-size: 10em;
+		font-family: 'Cutive Mono', monospace;
+		max-width: 100%;
+		color: rgb(150, 150, 150);
+
+  }
+
+  &__laps {
+		color: rgb(150, 150, 150);
+	}
+}
+
+@media (max-width: 989.98px) {
+	
+	.main {
+
+		&__time {
+			font-size: 7.6em;
+		}
+
+		&__button {
+
+			&_1 {
+				flex: 0 1 30%;
+			}
+	
+			&_2 {				
+				flex: 0 1 30%;
+			}
+	
+			&_3 {				
+				flex: 0 1 30%;
+			}
+	
+			&_4 {				
+				flex: 0 1 30%;
+			}
+	
+			&_5 {				
+				flex: 0 1 30%;
+			}
+	
+			&_6 {				
+				flex: 0 1 30%;
+			}
+		}
+	}
+}
+@media (max-width: 767.98px) {
+	.main {
+
+		&__time {
+			font-size: 5.8em;
+		}
+	}
+}
+@media (max-width: 579.98px) {
+	.main {
+
+		&__time {
+			font-size: 3.2em;
+		}
+
+		&__button {
+
+			&_1 {
+				flex: 0 1 45%;
+			}
+	
+			&_2 {				
+				flex: 0 1 45%;
+			}
+	
+			&_3 {				
+				flex: 0 1 45%;
+			}
+	
+			&_4 {				
+				flex: 0 1 45%;
+			}
+	
+			&_5 {				
+				flex: 0 1 45%;
+			}
+	
+			&_6 {				
+				flex: 0 1 45%;
+			}
+		}
+	}
+}
