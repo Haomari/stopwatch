@@ -6,9 +6,18 @@ var timer;
 var stopwatchEL = document.querySelector('.main__time')
 var lapsContainer = document.querySelector('.main__laps')
 
-function start(){
+function iconChanger() {
+	document.querySelector('.main__button_1').classList.toggle('_active');
+}
+
+function startPause(){
 	if(!timer) {
-		timer =setInterval(run, 10)
+		timer = setInterval(run, 10);
+		iconChanger()
+	}else{
+		clearInterval(timer);
+		timer = false;
+		iconChanger()
 	}
 }
 
@@ -39,11 +48,16 @@ function pause() {
 }
 
 function stop() {
+	if(s || m || ms) {
+		iconChanger()
+	}
+
   stopTimer();
 	ms = 0;
 	s = 0;
 	m =0;
 	stopwatchEL.textContent = getTimer();
+	lapsContainer.innerHTML = '';
 }
 
 function restart(){
@@ -51,10 +65,13 @@ function restart(){
 	start();
 }
 
+let liNumber = 0;
+
 function lap(){
 	if(timer) {
 		var li = document.createElement('li');
-		li.innerText = getTimer();
+		liNumber++
+		li.innerText = `${liNumber}. ${getTimer()}`;
 		lapsContainer.appendChild(li);
 	}
 }

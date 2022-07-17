@@ -16,12 +16,24 @@
 				<div class="main__stopwatch">
 					<div class="main__body">
 						<div class="main__controls">
-							<button class="main__button main__button_1" onclick="start()">Start</button>
-							<button class="main__button main__button_2" onclick="pause()">Pause</button>
-							<button class="main__button main__button_3" onclick="stop()">Stop</button>
-							<button class="main__button main__button_4" onclick="restart()">Restart</button>
-							<button class="main__button main__button_5" onclick="lap()">Lap</button>
-							<button class="main__button main__button_6" onclick="resetLaps()">Reset Laps</button>
+							<div class="main__button-body main__button-body_1">
+								<button class="main__button main__button_1" onclick="startPause()"></button>
+							</div>
+<!-- 							<div class="main__button-body">
+								<button class="main__button main__button_2" onclick="pause()">Pause</button>
+							</div> -->
+							<div class="main__button-body main__button-body_2">
+								<button class="main__button main__button_3" onclick="stop()">Restart</button>
+							</div>
+							<!-- <div class="main__button-body">
+								<button class="main__button main__button_4" onclick="restart()">Restart</button>
+							</div> -->
+							<div class="main__button-body main__button-body_3">
+								<button class="main__button main__button_5" onclick="lap()">Lap</button>
+							</div>
+<!-- 							<div class="main__button-body">
+								<button class="main__button main__button_6" onclick="resetLaps()">Reset Laps</button>
+							</div> -->
 						</div>
 						<div class="main__time">00:00:00</div>
 					</div>

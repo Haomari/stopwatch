@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:regular&display-swap);
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=B612+Mono:regular&display-swap);
 * {
   padding: 0;
   margin: 0;
@@ -154,23 +155,49 @@ ul li {
       -ms-flex-order: 1;
           order: 1;
 }
+.main__button-body_1 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.main__button-body_3 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
 .main__button {
-  aspect-ratio: 1/1;
   letter-spacing: 0.14em;
   line-height: 1.2;
   width: 120px;
+  height: 120px;
   background-color: rgb(163, 153, 6);
   color: rgb(223, 223, 223);
   border-radius: 50%;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .main__button:hover {
   -webkit-box-shadow: 0px 4px 18px rgba(244, 246, 252, 0.18);
           box-shadow: 0px 4px 18px rgba(244, 246, 252, 0.18);
   color: rgb(0, 0, 0);
   background-color: rgb(138, 129, 5);
+}
+.main__button_1 {
+  background-image: url("../img/controls/start.svg");
+  background-position: 60% 50%;
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+}
+.main__button_1._active {
+  background-image: url("../img/controls/stop.svg");
+  background-position: 54% 50%;
+  width: 300px;
+  height: 120px;
+  border-radius: 20px;
 }
 .main__time {
   font-size: 10em;
@@ -180,6 +207,10 @@ ul li {
 }
 .main__laps {
   color: rgb(150, 150, 150);
+  font-family: "Cutive Mono", monospace;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
 }
 
 @media (max-width: 989.98px) {
@@ -214,30 +245,30 @@ ul li {
   .main {
     /* 		&__button {
 
-    			&_1 {
-    				flex: 0 1 45%;
-    			}
+    	&_1 {
+    		flex: 0 1 45%;
+    	}
 
-    			&_2 {				
-    				flex: 0 1 45%;
-    			}
+    	&_2 {				
+    		flex: 0 1 45%;
+    	}
 
-    			&_3 {				
-    				flex: 0 1 45%;
-    			}
+    	&_3 {				
+    		flex: 0 1 45%;
+    	}
 
-    			&_4 {				
-    				flex: 0 1 45%;
-    			}
+    	&_4 {				
+    		flex: 0 1 45%;
+    	}
 
-    			&_5 {				
-    				flex: 0 1 45%;
-    			}
+    	&_5 {				
+    		flex: 0 1 45%;
+    	}
 
-    			&_6 {				
-    				flex: 0 1 45%;
-    			}
-    		} */
+    	&_6 {				
+    		flex: 0 1 45%;
+    	}
+    } */
   }
   .main__body {
     -webkit-box-flex: 0;

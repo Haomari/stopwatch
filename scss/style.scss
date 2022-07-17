@@ -1,6 +1,7 @@
 @import "null.style.scss";
 @import url(https://fonts.googleapis.com/css?family=Rubik:regular&display-swap);
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=B612+Mono:regular&display-swap);
 
 html {
   min-width: 320px;
@@ -25,8 +26,8 @@ body {
   flex-direction: column;
 }
 
-ul li{
-	padding: 10px 0;
+ul li {
+  padding: 10px 0;
 }
 
 // 
@@ -47,34 +48,56 @@ ul li{
     height: 100vh;
   }
 
-	&__body {
-		display: flex;
+  &__body {
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-		flex: 0 0 50%;
-	}
+    flex: 0 0 50%;
+  }
 
   &__controls {
     display: flex;
-		justify-content: center;
-		align-items: center;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 25px;
     margin-bottom: 40px;
-		order: 1;
+    order: 1;
+  }
+
+  &__button-body {
+
+    &_1 {
+			order: 1;
+      // flex: 1 1 100%;
+    }
+
+    &_2 {}
+
+    &_3 {
+			order: 2;
+		}
+
+    &_4 {}
+
+    &_5 {}
+
+    &_8 {}
+
   }
 
   &__button {
-		aspect-ratio: 1 / 1;
     letter-spacing: 0.14em;
     line-height: 1.2;
     width: 120px;
-    // height: 40px;
+    height: 120px;
     background-color: rgb(163, 153, 6);
     color: rgb(223, 223, 223);
     border-radius: 50%;
     transition: all 0.3s ease 0s;
+		justify-self: center;
+		align-self: center;
 
     &:hover {
       box-shadow: 0px 4px 18px rgba(244, 246, 252, 0.18);
@@ -82,7 +105,20 @@ ul li{
       background-color: rgb(138, 129, 5);
     }
 
-    &_1 {}
+    &_1 {
+      background-image: url('../img/controls/start.svg');
+      background-position: 60% 50%;
+      background-repeat: no-repeat;
+      background-size: 60% 60%;
+
+      &._active {
+        background-image: url('../img/controls/stop.svg');
+        background-position: 54% 50%;
+				width: 300px;
+				height: 120px;
+				border-radius: 20px;
+      }
+    }
 
     &_2 {}
 
@@ -98,91 +134,98 @@ ul li{
 
   &__time {
     font-size: 10em;
-		font-family: 'Cutive Mono', monospace;
-		max-width: 100%;
-		color: rgb(150, 150, 150);
+    font-family: 'Cutive Mono', monospace;
+    max-width: 100%;
+    color: rgb(150, 150, 150);
+    // order: 1;
 
   }
 
   &__laps {
-		color: rgb(150, 150, 150);
-	}
+    color: rgb(150, 150, 150);
+    font-family: 'Cutive Mono', monospace;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
 }
 
 @media (max-width: 989.98px) {
-	
-	.main {
 
-		&__time {
-			font-size: 7.6em;
-		}
+  .main {
 
-		&__controls {
-			gap: 15%;
-			row-gap: 20px;
-		}
+    &__time {
+      font-size: 7.6em;
+    }
 
-		&__body {
-			flex: 0 0 60%;
-		}
+    &__controls {
+      gap: 15%;
+      row-gap: 20px;
+    }
 
-		// &__button {
+    &__body {
+      flex: 0 0 60%;
+    }
 
-		// 	&_1 {
-		// 		flex: 0 1 30%;
-		// 	}
-	
-		// 	&_2 {				
-		// 		flex: 0 1 30%;
-		// 	}
-	
-		// 	&_3 {				
-		// 		flex: 0 1 30%;
-		// 	}
-	
-		// 	&_4 {				
-		// 		flex: 0 1 30%;
-		// 	}
-	
-		// 	&_5 {				
-		// 		flex: 0 1 30%;
-		// 	}
-	
-		// 	&_6 {				
-		// 		flex: 0 1 30%;
-		// 	}
-		// }
-	}
+    // &__button {
+
+    // 	&_1 {
+    // 		flex: 0 1 30%;
+    // 	}
+
+    // 	&_2 {				
+    // 		flex: 0 1 30%;
+    // 	}
+
+    // 	&_3 {				
+    // 		flex: 0 1 30%;
+    // 	}
+
+    // 	&_4 {				
+    // 		flex: 0 1 30%;
+    // 	}
+
+    // 	&_5 {				
+    // 		flex: 0 1 30%;
+    // 	}
+
+    // 	&_6 {				
+    // 		flex: 0 1 30%;
+    // 	}
+    // }
+  }
 }
+
 @media (max-width: 767.98px) {
-	.main {
+  .main {
 
-		&__controls {
-			gap: 5%;
-			row-gap: 20px;
-		}
+    &__controls {
+      gap: 5%;
+      row-gap: 20px;
+    }
 
-		&__body {
-			flex: 0 0 60%;
-		}
+    &__body {
+      flex: 0 0 60%;
+    }
 
-		&__time {
-			font-size: 5.8em;
-		}
-	}
+    &__time {
+      font-size: 5.8em;
+    }
+  }
 }
+
 @media (max-width: 579.98px) {
-	.main {
+  .main {
 
-		&__body {
-			flex: 0 0 65%;
-		}
+    &__body {
+      flex: 0 0 65%;
+    }
 
-		&__time {
-			font-size: 3.2em;
-		}
+    &__time {
+      font-size: 3.2em;
+    }
 
-/* 		&__button {
+    /* 		&__button {
 
 			&_1 {
 				flex: 0 1 45%;
@@ -208,5 +251,5 @@ ul li{
 				flex: 0 1 45%;
 			}
 		} */
-	}
+  }
 }
