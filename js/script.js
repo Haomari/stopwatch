@@ -49,13 +49,16 @@ function pause() {
 
 function stop() {
 	if(s || m || ms) {
+		if (timer){
 		iconChanger()
+		}
 	}
 
   stopTimer();
 	ms = 0;
 	s = 0;
 	m =0;
+	liNumber = 0;
 	stopwatchEL.textContent = getTimer();
 	lapsContainer.innerHTML = '';
 }
@@ -70,9 +73,14 @@ let liNumber = 0;
 function lap(){
 	if(timer) {
 		var li = document.createElement('li');
+		var span = document.createElement('span');
 		liNumber++
-		li.innerText = `${liNumber}. ${getTimer()}`;
+		span.innerText = `${liNumber}.`;
+		li.innerText = ` ${getTimer()}`;
+		lapsContainer.appendChild(span);
 		lapsContainer.appendChild(li);
+
+
 	}
 }
 
